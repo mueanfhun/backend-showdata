@@ -10,6 +10,8 @@ var _routes = _interopRequireDefault(require("./routes"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+const port = process.env.PORT || 8081;
+
 const express = require('express');
 
 const app = express();
@@ -34,6 +36,6 @@ _mongoose.default.connection.on('connected', () => {
   console.info('Mongoose connection has been connected.');
 });
 
-app.listen(8080, () => {
-  console.log('Start server at port 8080.');
+app.listen(port, () => {
+  console.log('Start server at port', port);
 });

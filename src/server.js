@@ -3,6 +3,8 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import router from './routes';
 
+const port = process.env.PORT || 8081;
+
 
 const express = require('express');
 
@@ -25,6 +27,6 @@ mongoose.connection.on('connected', () => {
   console.info('Mongoose connection has been connected.');
 });
 
-app.listen(8080, () => {
-  console.log('Start server at port 8080.');
+app.listen(port, () => {
+  console.log('Start server at port', port);
 });
