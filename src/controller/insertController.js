@@ -1,5 +1,4 @@
 import dataModel from '../models/schemas/dataPeople';
-import dataPeoples from '../datapeople.json';
 
 const insertController = (req, res) => {
   const payload = {
